@@ -31,10 +31,18 @@
   background-color: #201A23;
   border: none;
 }
+.btn-primary:hover {
+  background-color: #DE1A1A;
+}
 .btn-secondary {
   border: #201A23 solid thin;
   background-color: transparent;
   color: #201A23;
+}
+.btn-secondary:hover {
+  border: #DE1A1A solid thin;
+  color: #DE1A1A;
+  background-color: transparent;
 }
 
 /*---------------------------------------/*
@@ -43,6 +51,10 @@
 html {
   background-color: #FBFBFB;
   font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #DE1A1A;
 }
 
 /*---------------------------------------/*
