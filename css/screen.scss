@@ -11,6 +11,11 @@ $color-primary: #DE1A1A;
 $color-white: #FBFBFB;
 $color-black: #201A23;
 
+//Transparents
+$color-primary--transparent: rgba($color-primary, .5);
+$color-white--transparent: rgba($color-white, .5);
+$color-black--transparent: rgba($color-black, .5);
+
 //Space
 $space-small: 9px;
 $space-medium: 18px;
@@ -83,6 +88,63 @@ $border-dotted--black: $color-black dotted thin;
         }
     }
 }
+
+.card {
+    border: none;
+    border-radius: $border-radius--large; // Gebruik de variabele voor de juiste afronding van de hoeken
+    overflow: hidden; // Zorg dat niets buiten de card uitkomt, inclusief de afbeelding
+    position: relative; // Zorg dat de afbeelding en overlay zich in de card bevinden
+
+    &-img {
+        border-radius: $border-radius--large; // Zorg dat de afbeelding dezelfde border-radius heeft als de card
+        position: relative; // Zorg ervoor dat de overlay zich boven de afbeelding bevindt
+        transition: transform 0.4s ease; // Smooth transition voor het zoom-effect
+        width: 100%; // Zorg dat de afbeelding de volledige breedte vult
+        height: auto; // Zorg dat de afbeelding proportioneel blijft
+
+        &:hover {
+            transform: scale(1.1); // Voeg een smooth zoom effect toe bij hover
+        }
+    }
+
+    &-img-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Plaatst de titel bovenaan en de tekst onderaan
+
+        // Gradients van beide zijden naar het midden
+        background:
+            linear-gradient(to top right, transparent 50%, rgba($color-black, 0.75) 100%),
+            linear-gradient(to top left, transparent 50%, rgba($color-black, 0.75) 100%),
+            linear-gradient(to bottom right, transparent 50%, rgba($color-black, 0.75) 100%),
+            linear-gradient(to bottom left, transparent 50%, rgba($color-black, 0.75) 100%);
+
+        color: white;
+        padding: 1rem;
+        border-radius: $border-radius--large; // Gebruik de variabele voor de overlay
+
+        // Zorg ervoor dat de overlay bovenop de afbeelding komt
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        h5 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        .card-img {
+            transform: scale(1.1); // Voeg een inzoom-effect toe bij hover op de card
+        }
+    }
+}
 /*---------------------------------------/*
  # ELEMENTS
 /*---------------------------------------*/
@@ -107,6 +169,38 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: $space-extralarge;
+}
+
+.c-caseStudy {
+    &__header {
+        height: 50vh;
+        background-image: url("../assets/img/work/chiroPopov.webp");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        align-items: flex-end;
+        padding: $space-extralarge;
+
+        h1 {
+            color: $color-white;
+        }
+    }
+
+    &__card {
+        border: $border-thin--black;
+        border-radius: $border-radius--large;
+        padding: $space-large;
+
+        &--overview {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
 }
 /*---------------------------------------/*
  # UTILITIES
