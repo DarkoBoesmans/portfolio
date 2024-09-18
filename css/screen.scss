@@ -1,0 +1,102 @@
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$font-poppins: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//Colors
+$color-primary: #DE1A1A;
+$color-white: #FBFBFB;
+$color-black: #201A23;
+
+//Space
+$space-small: 9px;
+$space-medium: 18px;
+$space-large: 36px;
+$space-extralarge: 72px;
+
+$space-button: $space-small $space-medium;
+
+//Border radius
+$border-radius--small: 5px;
+$border-radius--medium: $border-radius--small * 2;
+$border-radius--large: $border-radius--medium * 2;
+
+//Borders
+$border-thin: $color-primary solid thin;
+$border-dotted: $color-primary dotted thin;
+
+$border-thin--black: $color-black solid thin;
+$border-dotted--black: $color-black dotted thin;
+
+/*---------------------------------------/*
+ # GENERIC - BOOTSTRAP
+/*---------------------------------------*/
+.rounded {
+    border-radius: $border-radius--large !important;
+}
+
+.navbar {
+    background-color: $color-black;
+    margin-top: $space-extralarge;
+    border-radius: $border-radius--medium;
+
+    padding: $space-small;
+
+    &-brand {
+        color: $color-white;
+    }
+
+    &-nav {
+        gap: $space-small;
+    }
+}
+
+.nav {
+    &-item {
+        background-color: $color-white;
+        border-radius: $border-radius--small;
+    }
+}
+
+.btn {
+    &-primary {
+        background-color: $color-black;
+        border: none;
+    }
+
+    &-secondary {
+        border: $border-thin--black;
+        background-color: transparent;
+        color: $color-black;
+    }
+}
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
+html {
+    background-color: $color-white;
+    font-family: $font-poppins;
+}
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+
+/*---------------------------------------/*
+ # COMPONENTS
+/*---------------------------------------*/
+.c-intro {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
+.u-hidden {
+    display: none;
+}

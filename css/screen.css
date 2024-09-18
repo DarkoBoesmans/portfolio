@@ -1,0 +1,66 @@
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*---------------------------------------/*
+ # GENERIC - BOOTSTRAP
+/*---------------------------------------*/
+.rounded {
+  border-radius: 20px !important;
+}
+
+.navbar {
+  background-color: #201A23;
+  margin-top: 72px;
+  border-radius: 10px;
+  padding: 9px;
+}
+.navbar-brand {
+  color: #FBFBFB;
+}
+.navbar-nav {
+  gap: 9px;
+}
+
+.nav-item {
+  background-color: #FBFBFB;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #201A23;
+  border: none;
+}
+.btn-secondary {
+  border: #201A23 solid thin;
+  background-color: transparent;
+  color: #201A23;
+}
+
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
+html {
+  background-color: #FBFBFB;
+  font-family: Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+/*---------------------------------------/*
+ # COMPONENTS
+/*---------------------------------------*/
+.c-intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
+.u-hidden {
+  display: none;
+}/*# sourceMappingURL=screen.css.map */
