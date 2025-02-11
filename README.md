@@ -4,7 +4,7 @@ Welcome to the repository for my personal portfolio website, where I showcase my
 
 ## 🌐 Live Demo
 
-[Check out the live version of my portfolio here!](https://darkoboesmans.com)
+[Check out the live version of my portfolio here!](https://DarkoBoesmans.github.io)
 
 ## 📋 Project Overview
 
